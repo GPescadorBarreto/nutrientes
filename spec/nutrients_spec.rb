@@ -26,5 +26,9 @@ RSpec.describe Nutrients do
       expect(@chocolate.lipids).not_to be nil
     end
     
+    it "stores and displays name" do
+      expect(@chocolate.name).to eq("chocolate")
+    end
+    
   end
 end
