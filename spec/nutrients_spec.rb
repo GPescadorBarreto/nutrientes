@@ -34,5 +34,9 @@ RSpec.describe Nutrients do
       expect(@chocolate.proteins).to eq(5.3)
     end
     
+    it "stores and displays carbs" do
+      expect(@chocolate.carbs).to eq(47.0)
+    end
+    
   end
 end
