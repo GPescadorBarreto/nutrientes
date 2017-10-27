@@ -30,5 +30,9 @@ RSpec.describe Nutrients do
       expect(@chocolate.name).to eq("chocolate")
     end
     
+    it "stores and displays proteins" do
+      expect(@chocolate.proteins).to eq(5.3)
+    end
+    
   end
 end
