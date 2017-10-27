@@ -46,5 +46,8 @@ RSpec.describe Nutrients do
       expect(@chocolate.to_s).to eq("chocolate: 5.3g proteins, 47.0g carbs, 30.0g lipids")
     end
     
+    it "calculates energetic value" do
+      expect(@chocolate.energy).to eq(564.2)
+    end
   end
 end
