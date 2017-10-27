@@ -17,5 +17,10 @@ RSpec.describe Nutrients do
     it "has a proteins value" do
       expect(@chocolate.proteins).not_to be nil
     end
+    
+    it "has a carbohydrates value" do
+      expect(@chocolate.carbohydrates).not_to be nil
+    end
+    
   end
 end
