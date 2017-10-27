@@ -7,7 +7,7 @@ RSpec.describe Nutrients do
   describe Food do
     
     before(:all) do
-      @chocolate = Food.new("chocolate", 5.3, 47.0)
+      @chocolate = Food.new("chocolate", 5.3, 47.0, 30.0)
     end
     
     it "is named" do
@@ -20,6 +20,10 @@ RSpec.describe Nutrients do
     
     it "has a carbs value" do
       expect(@chocolate.carbs).not_to be nil
+    end
+    
+    it "has a lipids value" do
+      expect(@chocolate.lipids).not_to be nil
     end
     
   end
