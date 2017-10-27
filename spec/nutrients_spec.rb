@@ -42,5 +42,9 @@ RSpec.describe Nutrients do
       expect(@chocolate.lipids).to eq(30.0)
     end
     
+    it "displays class formatted" do
+      expect(@chocolate.to_str).to eq("chocolate: 5.3g proteins, 47.0g carbs, 30.0g lipids")
+    end
+    
   end
 end
