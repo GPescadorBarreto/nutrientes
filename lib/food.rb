@@ -6,4 +6,9 @@ class Food
         @carbs = carbs
         @lipids = lipids
     end
+    
+    def to_s()
+        return String.new(@name + ": " + @proteins.to_s + "g proteins, " + @carbs.to_s + "g carbs, " + @lipids.to_s + "g lipids")
+    end
+    
 end
