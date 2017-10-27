@@ -11,4 +11,8 @@ class Food
         return String.new(@name + ": " + @proteins.to_s + "g proteins, " + @carbs.to_s + "g carbs, " + @lipids.to_s + "g lipids")
     end
     
+    def energy()
+        return (@proteins * 4 + @carbs * 4 + @lipids * 9)
+    end
+    
 end

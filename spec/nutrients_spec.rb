@@ -47,7 +47,7 @@ RSpec.describe Nutrients do
     end
     
     it "calculates energetic value" do
-      expect(@chocolate.energy).to eq(564.2)
+      expect(@chocolate.energy).to eq(479.2)
     end
   end
 end
