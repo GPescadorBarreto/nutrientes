@@ -28,3 +28,9 @@ class Egg_Based < Lacto_Ovo
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Dairy < Lacto_Ovo
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
