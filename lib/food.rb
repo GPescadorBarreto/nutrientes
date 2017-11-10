@@ -100,3 +100,9 @@ class Grain < Carb_Rich
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Tuber < Carb_Rich
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
