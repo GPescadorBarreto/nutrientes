@@ -23,4 +23,15 @@ class List
             @head = new_node
         end
     end
+    
+    def  put_right(new_node)
+        if (@head == nil && @tail == nil) then
+            @head = new_node
+            @tail = new_node
+        else
+            @tail.node[:next] = new_node
+            new_node.node[:prev] = @tail
+            @tail = new_node
+        end
+    end
 end
