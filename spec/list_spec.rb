@@ -51,5 +51,11 @@ RSpec.describe Node do
             @list.del_first()
             expect(@list.head).to be @aux_node.node[:next]
         end
+        
+        it "can delete last node" do
+            @aux_node = @list.tail
+            @list.del_last()
+            expect(@list.tail).to be @aux_node.node[:prev]
+        end
     end
 end
