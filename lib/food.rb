@@ -64,3 +64,9 @@ class Fish < Sea_Product
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Shellfish < Sea_Product
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
