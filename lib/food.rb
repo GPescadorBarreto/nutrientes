@@ -124,3 +124,15 @@ class Berry < Vegetable
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Fruit < Food
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
+
+class Tropical < Fruit
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
