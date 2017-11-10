@@ -88,6 +88,10 @@ RSpec.describe Nutrients do
         it "is part of a hierarchy" do
           expect(@cow_milk.class.ancestors.include?(Food)).to eq(true)
         end
+        
+        it "responds to superclass methods" do
+          expect(@cow_milk.respond_to?(:energy)).to eq(true)
+        end
       end
     end
     
@@ -107,6 +111,9 @@ RSpec.describe Nutrients do
     
         it "is part of a hierarchy" do
           expect(@pork.class.ancestors.include?(Food)).to eq(true)
+        end
+        it "responds to superclass methods" do
+          expect(@pork.respond_to?(:energy)).to eq(true)
         end
       end
     end
@@ -128,6 +135,9 @@ RSpec.describe Nutrients do
         it "is part of a hierarchy" do
           expect(@cod.class.ancestors.include?(Food)).to eq(true)
         end
+        it "responds to superclass methods" do
+          expect(@cod.respond_to?(:energy)).to eq(true)
+        end
       end
     end
     
@@ -147,6 +157,9 @@ RSpec.describe Nutrients do
     
         it "is part of a hierarchy" do
           expect(@olive_oil.class.ancestors.include?(Food)).to eq(true)
+        end
+        it "responds to superclass methods" do
+          expect(@olive_oil.respond_to?(:energy)).to eq(true)
         end
       end
     end
@@ -168,6 +181,9 @@ RSpec.describe Nutrients do
         it "is part of a hierarchy" do
           expect(@sugar.class.ancestors.include?(Food)).to eq(true)
         end
+        it "responds to superclass methods" do
+          expect(@sugar.respond_to?(:energy)).to eq(true)
+        end
       end
       describe Grain do
         before(:all) do
@@ -185,6 +201,9 @@ RSpec.describe Nutrients do
         it "is part of a hierarchy" do
           expect(@rice.class.ancestors.include?(Food)).to eq(true)
         end
+        it "responds to superclass methods" do
+          expect(@rice.respond_to?(:energy)).to eq(true)
+        end
       end
       describe Tuber do
         before(:all) do
@@ -201,6 +220,9 @@ RSpec.describe Nutrients do
     
         it "is part of a hierarchy" do
           expect(@potatoes.class.ancestors.include?(Food)).to eq(true)
+        end
+        it "responds to superclass methods" do
+          expect(@potatoes.respond_to?(:energy)).to eq(true)
         end
       end
     end
@@ -222,6 +244,9 @@ RSpec.describe Nutrients do
         it "is part of a hierarchy" do
           expect(@onion.class.ancestors.include?(Food)).to eq(true)
         end
+        it "responds to superclass methods" do
+          expect(@onion.respond_to?(:energy)).to eq(true)
+        end
       end
       
       describe Berry do
@@ -239,6 +264,9 @@ RSpec.describe Nutrients do
     
         it "is part of a hierarchy" do
           expect(@pumpkin.class.ancestors.include?(Food)).to eq(true)
+        end
+        it "responds to superclass methods" do
+          expect(@pumpkin.respond_to?(:energy)).to eq(true)
         end
       end
     end
@@ -258,6 +286,9 @@ RSpec.describe Nutrients do
     
         it "is part of a hierarchy" do
           expect(@banana.class.ancestors.include?(Food)).to eq(true)
+        end
+        it "responds to superclass methods" do
+          expect(@banana.respond_to?(:energy)).to eq(true)
         end
       end
     end
