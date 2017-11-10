@@ -52,3 +52,15 @@ class Meat_Derivate < Meat_Product
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Sea_Product < Food
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
+
+class Fish < Sea_Product
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
