@@ -44,4 +44,14 @@ class List
             @tail = nil
         end
     end
+    
+    def del_last()
+        if (@head != @tail)
+            @tail = @tail.node[:prev]
+            @tail.node[:next] = nil
+        else
+            @head = nil
+            @tail = nil
+        end
+    end
 end
