@@ -213,7 +213,7 @@ RSpec.describe Nutrients do
         end
     
         it "has the correct superclass" do
-          expect(@onion.class.superclass).to eq(Vegetables)
+          expect(@onion.class.superclass).to eq(Vegetable)
         end
     
         it "is part of a hierarchy" do
