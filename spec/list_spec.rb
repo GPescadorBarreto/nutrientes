@@ -29,5 +29,13 @@ RSpec.describe Node do
             expect(@list.head).to_not be nil
             expect(@list.tail).to_not be nil
         end
+        
+        it "can add several nodes by the left" do
+            @list.put_left(@nodeB)
+            expect(@list.head).to be @nodeB
+            expect(@list.tail).to be @nodeA
+            expect(@nodeB.node[:next]).to be @nodeA
+            expect(@nodeA.node[:prev]).to be @nodeB
+        end
     end
 end
