@@ -16,3 +16,15 @@ class Food
     end
     
 end
+
+class Lacto_Ovo < Food
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
+
+class Egg_Based < Lacto_Ovo
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end

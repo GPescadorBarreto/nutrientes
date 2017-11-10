@@ -65,7 +65,7 @@ RSpec.describe Nutrients do
     end
     
     it "is part of a hierarchy" do
-      expect(@fried_egg.class.is_a? Food).to eq(true)
+      expect(@fried_egg.class.ancestors.include?(Food)).to eq(true)
     end
   end
 end
