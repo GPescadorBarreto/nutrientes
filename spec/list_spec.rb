@@ -25,13 +25,13 @@ RSpec.describe Node do
         end
         
         it "can store data as content (has head and tail node(s))" do
-            @list.put_left(@nodeB)
+            @list.put_first(@nodeB)
             expect(@list.head).to_not be nil
             expect(@list.tail).to_not be nil
         end
         
         it "can add several nodes by the left" do
-            @list.put_left(@nodeA)
+            @list.put_first(@nodeA)
             expect(@list.head).to be @nodeA
             expect(@list.tail).to be @nodeB
             expect(@nodeA.node[:next]).to be @nodeB
@@ -39,7 +39,7 @@ RSpec.describe Node do
         end
         
         it "can add nodes by the right" do
-            @list.put_right(@nodeC)
+            @list.put_last(@nodeC)
             expect(@list.tail).to be @nodeC
             expect(@list.head).to be @nodeA
             expect(@nodeC.node[:prev]).to be @nodeB

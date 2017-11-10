@@ -13,7 +13,7 @@ class List
         @tail = nil
     end
    
-    def  put_left(new_node)
+    def  put_first(new_node)
         if (@head == nil && @tail == nil) then
             @head = new_node
             @tail = new_node
@@ -24,7 +24,7 @@ class List
         end
     end
     
-    def  put_right(new_node)
+    def  put_last(new_node)
         if (@head == nil && @tail == nil) then
             @head = new_node
             @tail = new_node
