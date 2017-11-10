@@ -127,6 +127,26 @@ RSpec.describe Nutrients do
         end
       end
     end
+    
+    describe Fatty_Food do
+      describe Saturated_Fats do
+        before(:all) do
+          @olive_oil = Fish.new("Olive Oil", 0.0, 0.2, 99.6)
+        end
+    
+        it "has the correct class" do
+          expect(@olive_oil.class).to eq(Saturated_Fats)
+        end
+    
+        it "has the correct superclass" do
+          expect(@olive_oil.class.superclass).to eq(Fatty_Food)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@olive_oil.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+    end
   end
   
 end
