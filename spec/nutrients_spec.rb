@@ -49,41 +49,64 @@ RSpec.describe Nutrients do
     it "calculates energetic value" do
       expect(@chocolate.energy).to eq(479.2)
     end
+    
+    describe Lacto_Ovo do
+      describe Egg_Based do
+        before(:all) do
+          @fried_egg = Egg_Based.new("Fried Egg", 14.1, 0.0, 19.5)
+        end
+        
+        it "has the correct class" do
+          expect(@fried_egg.class).to eq(Egg_Based)
+        end
+        
+        it "has the correct superclass" do
+          expect(@fried_egg.class.superclass).to eq(Lacto_Ovo)
+        end
+        
+        it "is part of a hierarchy" do
+          expect(@fried_egg.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+  
+      describe Dairy do
+        before(:all) do
+          @cow_milk = Dairy.new("Cow Milk", 3.3, 4.8, 3.2)
+        end
+    
+        it "has the correct class" do
+          expect(@cow_milk.class).to eq(Dairy)
+        end
+    
+        it "has the correct superclass" do
+          expect(@cow_milk.class.superclass).to eq(Lacto_Ovo)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@cow_milk.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+    end
+    
+    describe Meat_Product do
+      describe Meat do
+        before(:all) do
+          @pork = Meat.new("Pork", 21.5, 0.0, 6.3)
+        end
+    
+        it "has the correct class" do
+          expect(@pork.class).to eq(Meat)
+        end
+    
+        it "has the correct superclass" do
+          expect(@pork.class.superclass).to eq(Meat_Product)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@pork.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+    end
   end
   
-  describe Egg_Based do
-    before(:all) do
-      @fried_egg = Egg_Based.new("Fried Egg", 14.1, 0.0, 19.5)
-    end
-    
-    it "has the correct class" do
-      expect(@fried_egg.class).to eq(Egg_Based)
-    end
-    
-    it "has the correct superclass" do
-      expect(@fried_egg.class.superclass).to eq(Lacto_Ovo)
-    end
-    
-    it "is part of a hierarchy" do
-      expect(@fried_egg.class.ancestors.include?(Food)).to eq(true)
-    end
-  end
-  
-  describe Dairy do
-    before(:all) do
-      @cow_milk = Dairy.new("Cow Milk", 3.3, 4.8, 3.2)
-    end
-    
-    it "has the correct class" do
-      expect(@cow_milk.class).to eq(Dairy)
-    end
-    
-    it "has the correct superclass" do
-      expect(@cow_milk.class.superclass).to eq(Lacto_Ovo)
-    end
-    
-    it "is part of a hierarchy" do
-      expect(@cow_milk.class.ancestors.include?(Food)).to eq(true)
-    end
-  end
 end
