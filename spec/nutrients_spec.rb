@@ -183,7 +183,23 @@ RSpec.describe Nutrients do
           expect(@rice.class.ancestors.include?(Food)).to eq(true)
         end
       end
-      
+      describe Tuber do
+        before(:all) do
+          @potatoes = Tuber.new("Potatoes", 2.0, 15.4, 0.1)
+        end
+    
+        it "has the correct class" do
+          expect(@potatoes.class).to eq(Tuber)
+        end
+    
+        it "has the correct superclass" do
+          expect(@potatoes.class.superclass).to eq(Carb_Rich)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@potatoes.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
     end
   end
   
