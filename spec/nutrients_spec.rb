@@ -107,6 +107,26 @@ RSpec.describe Nutrients do
         end
       end
     end
+    
+    describe Sea_Product do
+      describe Fish do
+        before(:all) do
+          @cod = Fish.new("Cod", 17.7, 0.0, 0.4)
+        end
+    
+        it "has the correct class" do
+          expect(@cod.class).to eq(Fish)
+        end
+    
+        it "has the correct superclass" do
+          expect(@cod.class.superclass).to eq(Sea_Product)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@cod.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+    end
   end
   
 end
