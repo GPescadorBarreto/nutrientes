@@ -131,7 +131,7 @@ RSpec.describe Nutrients do
     describe Fatty_Food do
       describe Saturated_Fats do
         before(:all) do
-          @olive_oil = Fish.new("Olive Oil", 0.0, 0.2, 99.6)
+          @olive_oil = Saturated_Fats.new("Olive Oil", 0.0, 0.2, 99.6)
         end
     
         it "has the correct class" do

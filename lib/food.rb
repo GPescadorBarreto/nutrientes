@@ -70,3 +70,15 @@ class Shellfish < Sea_Product
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Fatty_Food < Food
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
+
+class Saturated_Fats < Fatty_Food
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
