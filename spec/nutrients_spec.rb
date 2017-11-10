@@ -147,6 +147,26 @@ RSpec.describe Nutrients do
         end
       end
     end
+    
+    describe Carb_Rich do
+      describe Sugary do
+        before(:all) do
+          @sugar = Sugary.new("Sugar", 0.0, 99.8, 0.0)
+        end
+    
+        it "has the correct class" do
+          expect(@sugar.class).to eq(Sugary)
+        end
+    
+        it "has the correct superclass" do
+          expect(@sugar.class.superclass).to eq(Carb_Rich)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@sugar.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+    end
   end
   
 end
