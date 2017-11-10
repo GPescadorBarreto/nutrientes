@@ -46,3 +46,9 @@ class Meat < Meat_Product
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Meat_Derivate < Meat_Product
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
