@@ -45,5 +45,11 @@ RSpec.describe Node do
             expect(@nodeC.node[:prev]).to be @nodeB
             expect(@nodeB.node[:next]).to be @nodeC
         end
+        
+        it "can delete first node" do
+            @aux_node = @list.head
+            @list.del_first()
+            expect(@list.head).to be @aux_node.node[:next]
+        end
     end
 end
