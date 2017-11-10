@@ -50,4 +50,22 @@ RSpec.describe Nutrients do
       expect(@chocolate.energy).to eq(479.2)
     end
   end
+  
+  describe Egg_Based do
+    before(:all) do
+      @fried_egg = Egg_Based.new("Fried Egg", 14.1, 0.0, 19.5)
+    end
+    
+    it "has the correct class" do
+      expect(@fried_egg.class).to eq(Egg_Based)
+    end
+    
+    it "has the correct superclass" do
+      expect(@fried_egg.class.superclass).to eq(Lacto_Ovo)
+    end
+    
+    it "is part of a hierarchy" do
+      expect(@fried_egg.class.is_a? Food).to eq(true)
+    end
+  end
 end
