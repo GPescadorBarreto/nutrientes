@@ -83,13 +83,19 @@ class Saturated_Fats < Fatty_Food
     end
 end
 
-class Carb_Rich < Fatty_Food
+class Carb_Rich < Food
     def initialize(name, proteins, carbs, lipids)
         super(name, proteins, carbs, lipids)
     end
 end
 
 class Sugary < Carb_Rich
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
+
+class Grain < Carb_Rich
     def initialize(name, proteins, carbs, lipids)
         super(name, proteins, carbs, lipids)
     end
