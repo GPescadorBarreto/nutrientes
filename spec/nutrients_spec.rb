@@ -239,6 +239,25 @@ RSpec.describe Nutrients do
         end
       end
     end
+    describe Fruit do
+      describe Tropical do
+        before(:all) do
+          @banana = Tropical.new("Banana", 1.2, 21.4, 0.2)
+        end
+    
+        it "has the correct class" do
+          expect(@banana.class).to eq(Tropical)
+        end
+    
+        it "has the correct superclass" do
+          expect(@banana.class.superclass).to eq(Fruit)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@banana.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+    end
   end
   
 end
