@@ -166,6 +166,24 @@ RSpec.describe Nutrients do
           expect(@sugar.class.ancestors.include?(Food)).to eq(true)
         end
       end
+      describe Grain do
+        before(:all) do
+          @rice = Grain.new("Rice", 6.8, 77.7, 0.6)
+        end
+    
+        it "has the correct class" do
+          expect(@rice.class).to eq(Grain)
+        end
+    
+        it "has the correct superclass" do
+          expect(@rice.class.superclass).to eq(Carb_Rich)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@rice.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+      
     end
   end
   
