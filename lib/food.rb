@@ -118,3 +118,9 @@ class Bulb < Vegetable
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Berry < Vegetable
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
