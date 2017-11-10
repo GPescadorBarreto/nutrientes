@@ -201,6 +201,26 @@ RSpec.describe Nutrients do
         end
       end
     end
+    
+    describe Vegetable do
+      describe Bulb do
+        before(:all) do
+          @onion = Bulb.new("Onion", 1.3, 5.8, 0.3)
+        end
+    
+        it "has the correct class" do
+          expect(@onion.class).to eq(Bulb)
+        end
+    
+        it "has the correct superclass" do
+          expect(@onion.class.superclass).to eq(Vegetables)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@onion.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
+    end
   end
   
 end
