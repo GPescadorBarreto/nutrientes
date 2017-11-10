@@ -67,6 +67,9 @@ RSpec.describe Nutrients do
         it "is part of a hierarchy" do
           expect(@fried_egg.class.ancestors.include?(Food)).to eq(true)
         end
+        it "responds to superclass methods" do
+          expect(@fried_egg.respond_to?(:energy)).to eq(true)
+        end
       end
   
       describe Dairy do
