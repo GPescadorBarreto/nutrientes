@@ -17,6 +17,10 @@ class List
         if (@head == nil && @tail == nil) then
             @head = new_node
             @tail = new_node
+        else
+            @head.node[:prev] = new_node
+            new_node.node[:next] = @head
+            @head = new_node
         end
     end
 end
