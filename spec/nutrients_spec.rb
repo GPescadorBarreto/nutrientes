@@ -68,4 +68,22 @@ RSpec.describe Nutrients do
       expect(@fried_egg.class.ancestors.include?(Food)).to eq(true)
     end
   end
+  
+  describe Dairy do
+    before(:all) do
+      @cow_milk = Dairy.new("Cow Milk", 3.3, 4.8, 3.2)
+    end
+    
+    it "has the correct class" do
+      expect(@cow_milk.class).to eq(Dairy)
+    end
+    
+    it "has the correct superclass" do
+      expect(@cow_milk.class.superclass).to eq(Lacto_Ovo)
+    end
+    
+    it "is part of a hierarchy" do
+      expect(@cow_milk.class.ancestors.include?(Food)).to eq(true)
+    end
+  end
 end
