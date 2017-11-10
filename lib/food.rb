@@ -34,3 +34,15 @@ class Dairy < Lacto_Ovo
         super(name, proteins, carbs, lipids)
     end
 end
+
+class Meat_Product < Food
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
+
+class Meat < Meat_Product
+    def initialize(name, proteins, carbs, lipids)
+        super(name, proteins, carbs, lipids)
+    end
+end
