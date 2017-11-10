@@ -220,6 +220,24 @@ RSpec.describe Nutrients do
           expect(@onion.class.ancestors.include?(Food)).to eq(true)
         end
       end
+      
+      describe Berry do
+        before(:all) do
+          @pumpkin = Berry.new("Pumpkin", 1.1, 4.8, 0.1)
+        end
+    
+        it "has the correct class" do
+          expect(@pumpkin.class).to eq(Berry)
+        end
+    
+        it "has the correct superclass" do
+          expect(@pumpkin.class.superclass).to eq(Vegetable)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@pumpkin.class.ancestors.include?(Food)).to eq(true)
+        end
+      end
     end
   end
   
