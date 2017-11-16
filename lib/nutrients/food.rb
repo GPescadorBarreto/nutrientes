@@ -1,4 +1,5 @@
 class Food
+    include Comparable
     attr_reader :name, :proteins, :carbs, :lipids
     def initialize(name, proteins, carbs, lipids)
         @name = name
@@ -13,6 +14,20 @@ class Food
     
     def energy()
         return (@proteins * 4 + @carbs * 4 + @lipids * 9)
+    end
+    
+    def <=>(other)
+        comparison = energy <=> other.energy
+        if comparison == 0
+            comparison = proteins <=> other.proteins
+            if comparison == 0
+                comparison = carbs <=> other.carbs
+                if comparison == 0
+                    comparison = lipids <=> other.lipids
+                end
+            end
+        end
+        return comparison
     end
     
 end
