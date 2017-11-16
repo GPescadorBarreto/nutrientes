@@ -50,6 +50,18 @@ RSpec.describe Nutrients do
       expect(@chocolate.energy).to eq(479.2)
     end
     
+    it "is comparable" do
+      @olive_oil = Saturated_Fats.new("Olive Oil", 0.0, 0.2, 99.6)
+      @fried_egg = Egg_Based.new("Fried Egg", 14.1, 0.0, 19.5)
+      expect(@chocolate == @chocolate).to be true
+      expect(@olive_oil > @fried_egg).to be true
+      expect(@chocolate < @olive_oil).to be true
+      expect(@chocolate <= @chocolate).to be true
+      expect(@fried_egg <= @chocolate).to be true
+      expect(@fried_egg >= @fried_egg).to be true
+      expect(@olive_oil >= @chocolate).to be true
+    end
+    
     describe Lacto_Ovo do
       describe Egg_Based do
         before(:all) do
