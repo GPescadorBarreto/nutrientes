@@ -1,0 +1,18 @@
+Thu, 16 Nov 2017 19:32:10 +0000
+./bin/console	Thu, 26 Oct 2017 23:41:23 +0000
+./bin/setup	Thu, 26 Oct 2017 23:41:23 +0000
+./LICENSE.txt	Thu, 26 Oct 2017 23:41:23 +0000
+./spec/list_spec.rb	Thu, 16 Nov 2017 19:15:31 +0000
+./spec/spec_helper.rb	Fri, 10 Nov 2017 00:34:35 +0000
+./spec/nutrients_spec.rb	Thu, 16 Nov 2017 18:31:07 +0000
+./Rakefile	Thu, 26 Oct 2017 23:41:23 +0000
+./README.md	Fri, 27 Oct 2017 00:03:32 +0000
+./CODE_OF_CONDUCT.md	Thu, 26 Oct 2017 23:41:23 +0000
+./Gemfile	Thu, 26 Oct 2017 23:41:23 +0000
+./Guardfile	Fri, 10 Nov 2017 04:33:46 +0000
+./Gemfile.lock	Fri, 10 Nov 2017 10:20:25 +0000
+./lib/nutrients.rb	Thu, 16 Nov 2017 15:30:45 +0000
+./lib/nutrients/list.rb	Thu, 16 Nov 2017 19:23:12 +0000
+./lib/nutrients/food.rb	Thu, 16 Nov 2017 18:30:42 +0000
+./lib/nutrients/version.rb	Fri, 10 Nov 2017 04:33:46 +0000
+./nutrients.gemspec	Fri, 10 Nov 2017 04:33:46 +0000
