@@ -57,5 +57,9 @@ RSpec.describe Node do
             @list.del_last()
             expect(@list.tail).to be @aux_node.node[:prev]
         end
+        
+        it "is enumerable" do
+            expect(@list.all? { |node| node.node[:value] >= 0}).to be true 
+        end
     end
 end
