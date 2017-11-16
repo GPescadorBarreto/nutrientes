@@ -7,10 +7,19 @@ class Node
 end
 
 class List
+    include Enumerable
     attr_reader :head, :tail
     def initialize()
         @head = nil
         @tail = nil
+    end
+    
+    def each
+        aux_node = @head
+        while aux_node != nil do
+            yield aux_node
+            aux_node = aux_node.node[:next]
+        end
     end
    
     def  put_first(new_node)
