@@ -28,10 +28,10 @@ RSpec.describe Experiment do
     end
     
     it "initializes correctly" do
+        patientA = Person.new(@foods1)
         patientB = Person.new(@foods2)
-        @people1 = Array.new()
-        @people1 = [patientA, patientB]
-        @experimentA = Experiment.new(people1)
+        people1 = [patientA, patientB]
+        experimentA = Experiment.new(people1)
         expect(experimentA.people[0].foods[3][2] == 5.9).to be true
     end
 end

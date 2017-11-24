@@ -1,5 +1,8 @@
 class Experiment
-    
+    attr_reader :people
+    def initialize(people_)
+        @people = people_
+    end
 end
 
 class Person
