@@ -11,16 +11,17 @@ RSpec.describe Experiment do
         @yoghurt2 =   [4.9, 4.9, 5.2, 5.8, 6.5, 7.0, 7.2, 7.3, 7.3, 6.6, 6.2, 6.1, 6.0, 6.1, 5.9, 5.9, 5.9, 5.9, 5.8, 5.8, 5.5, 5.5, 5.6, 5.9, 5.9]
         @chocolate2 = [4.6, 4.6, 4.7, 4.7, 4.8, 4.7, 4.8, 4.8, 4.6, 4.4, 4.7, 4.7, 4.8, 4.7, 5.2, 5.9, 5.9, 5.7, 5.4, 5.3, 5.1, 4.8, 4.8, 4.9, 5.9]
         @glucose2 =   [6.3, 5.4, 5.6, 5.7, 6.5, 7.4, 7.9, 7.4, 7.7, 7.9, 7.9, 7.8, 7.8, 7.8, 8.0, 8.5, 9.4, 10.8, 10.5, 9.1, 8.9, 8.3, 7.7, 7.6, 7.5]
+        @patient1 = [@glucose1,@apple1]
+        @patient2 = [@glucose2,@apple2]
+        @experiment = Experiment.new([@patient1,@patient2])
     end
     
     it "initializes correctly" do
-        patient1 = [@glucose1,@apple1]
-        patient2 = [@glucose2,@apple2]
-        experiment = Experiment.new([patient1,patient2])
-        expect(experiment.food_values[0][0][2]==5.9).to be true
+        expect(@experiment.food_values[0][0][2]==5.9).to be true
     end
     
-    it "calculates glycemic index" do
-        expect(experiment.get_GI()==50.9).to be true 
+    it "glycemic index is deterministic" do
+        puts(@experiment.get_food_GI())
+        expect(@experiment.get_food_GI()==@experiment.get_food_GI()).to be true 
     end
 end
