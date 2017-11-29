@@ -1,13 +1,7 @@
 class Experiment
-    attr_reader :people
-    def initialize(people_)
-        @people = people_
+    attr_reader :food_values
+    def initialize(food_values_)
+        @food_values = food_values_
     end
 end
 
-class Person
-    attr_reader :foods
-    def initialize(foods_)
-        @foods = foods_
-    end
-end
