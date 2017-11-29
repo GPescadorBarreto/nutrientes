@@ -10,5 +10,4 @@ class Person
     def initialize(foods_)
         @foods = foods_
     end
-
 end
