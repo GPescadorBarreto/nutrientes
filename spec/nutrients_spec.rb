@@ -8,6 +8,28 @@ RSpec.describe Nutrients do
     
     before(:all) do
       @chocolate = Food.new("chocolate", 5.3, 47.0, 30.0)
+      @test_array = [Lacto_Ovo.new("Fried Egg", 14.1, 0.0, 19.5),
+      Lacto_Ovo.new("Cow Milk", 3.3, 4.8, 3.2),
+      Lacto_Ovo.new("Yoghurt", 3.8, 4.9, 3.8),
+      Meat_Product.new("Pork", 21.5, 0.0, 6.3),
+      Meat_Product.new("Veal", 21.1, 0.0, 3.1),
+      Meat_Product.new("Chicken", 20.6, 0.0, 5.6),
+      Fish.new("Cod", 17.7, 0.0, 0.4),
+      Fish.new("Tunna", 21.5, 0.0, 15.5),
+      Fish.new("Salmon", 19.9, 0.0, 13.6),
+      Fatty_Food.new("Olive Oil", 0.0, 0.2, 99.6),
+      Fatty_Food.new("Butter", 0.7, 0.0, 83.2),
+      Fatty_Food.new("Chocolate", 5.3, 47.0, 30.0),
+      Carb_Rich.new("Sugar", 0.0, 99.8, 0.0),
+      Carb_Rich.new("Rice", 6.8, 77.7, 0.6),
+      Carb_Rich.new("Lentils", 23.5, 52.0, 1.4),
+      Carb_Rich.new("Potato", 2.0, 15.4, 0.1),
+      Vegetable.new("Tomato", 1.0, 3.5, 0.2),
+      Vegetable.new("Onion", 1.3, 5.8, 0.3),
+      Vegetable.new("Pumpkin", 1.1, 4.8, 0.1),
+      Fruit.new("Apple", 0.3, 12.4, 0.4),
+      Fruit.new("Banana", 1.2, 21.4, 0.2),
+      Fruit.new("Pear", 0.5 ,12.7, 0.3)]
     end
     
     it "is named" do
@@ -282,6 +304,7 @@ RSpec.describe Nutrients do
         end
       end
     end
+    
     describe Fruit do
       describe Tropical do
         before(:all) do
@@ -304,6 +327,7 @@ RSpec.describe Nutrients do
         end
       end
     end
+    
   end
   
 end
