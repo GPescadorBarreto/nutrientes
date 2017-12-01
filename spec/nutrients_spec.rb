@@ -1,4 +1,5 @@
 require "spec_helper"
+require 'benchmark'
 
 RSpec.describe Nutrients do
   it "has a version number" do
@@ -380,6 +381,15 @@ RSpec.describe Nutrients do
       it "is sorted with a sort" do
         sort_sorted = @test_array.sort
        expect(sort_sorted[0].lipids == 0.2).to be true
+      end
+      
+      it "benchmark" do
+        l1 = l2 = l3 = @test_array
+        Benchmark.bm do |bm| 
+           bm.report("For sorting\n") { sort_for(l1)}
+           bm.report("Each sorting\n") { sort_each(l2)}
+           bm.report("'Sort' sorting\n")  { l3.sort }
+        end
       end
     end
   end
