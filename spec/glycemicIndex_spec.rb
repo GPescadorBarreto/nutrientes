@@ -21,7 +21,6 @@ RSpec.describe Experiment do
     end
     
     it "glycemic index is deterministic" do
-        puts(@experiment.get_food_GI())
         expect(@experiment.get_food_GI()==@experiment.get_food_GI()).to be true 
     end
 end

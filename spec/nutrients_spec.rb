@@ -32,6 +32,22 @@ RSpec.describe Nutrients do
       Fruit.new("Pear", 0.5 ,12.7, 0.3)]
     end
     
+    it "is sorted with a for" do
+      def sort_for (array)
+        for i in 0..array.length
+          for j in i+1..array.length - 1
+            if array[i] > array[j]
+              array[i] , array[j] = array[j] , array[i]
+            end
+          end
+        end
+        return array
+      end
+      @for_sorted = @test_array
+      sort_for(@for_sorted)
+      expect(@for_sorted[0].lipids == 0.2).to be true
+    end
+    
     it "is named" do
       expect(@chocolate.name).not_to be nil
     end
@@ -327,6 +343,8 @@ RSpec.describe Nutrients do
         end
       end
     end
+    
+
     
   end
   
