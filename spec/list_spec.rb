@@ -22,6 +22,7 @@ RSpec.describe Node do
         before(:all) do
             @nodeA = Node.new(0)
             @list = List.new()
+            @list2 = List.new()
         end
         
         it "can store data as content (has head and tail node(s))" do
@@ -63,7 +64,6 @@ RSpec.describe Node do
         end
         
         it "can put last when empty" do
-            @list2 = List.new()
             @list2.put_last(@nodeA)
             expect(@list.head).to_not be nil
             expect(@list.tail).to_not be nil
