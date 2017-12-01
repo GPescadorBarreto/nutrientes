@@ -32,46 +32,6 @@ RSpec.describe Nutrients do
       Fruit.new("Pear", 0.5 ,12.7, 0.3)]
     end
     
-    it "is sorted with a for" do
-      def sort_for (array)
-        for i in 0..array.length
-          for j in i+1..array.length - 1
-            if array[i] > array[j]
-              array[i] , array[j] = array[j] , array[i]
-            end
-          end
-        end
-        return array
-      end
-      @for_sorted = @test_array
-      sort_for(@for_sorted)
-      expect(@for_sorted[0].lipids == 0.2).to be true
-    end
-    
-    it "is sorted with an each" do
-      def sort_each (array)
-        array.each do
-          done = true
-          array.each_with_index do |n, i|
-            if i == array.length - 1 
-              break
-            end
-            if n > array[i + 1]
-              array[i], array[i + 1] = array[i + 1], array[i]
-              done = false
-            end
-          end
-          if done 
-            break
-          end
-        end 
-        return array
-      end
-      @each_sorted = @test_array
-      sort_each(@each_sorted)
-      expect(@each_sorted[0].lipids == 0.2).to be true
-    end
-    
     it "is named" do
       expect(@chocolate.name).not_to be nil
     end
@@ -368,7 +328,50 @@ RSpec.describe Nutrients do
       end
     end
     
-
+    it "is sorted with a for" do
+      def sort_for (array)
+        for i in 0..array.length
+          for j in i+1..array.length - 1
+            if array[i] > array[j]
+              array[i] , array[j] = array[j] , array[i]
+            end
+          end
+        end
+        return array
+      end
+      @for_sorted = @test_array
+      sort_for(@for_sorted)
+      expect(@for_sorted[0].lipids == 0.2).to be true
+    end
+    
+    it "is sorted with an each" do
+      def sort_each (array)
+        array.each do
+          done = true
+          array.each_with_index do |n, i|
+            if i == array.length - 1 
+              break
+            end
+            if n > array[i + 1]
+              array[i], array[i + 1] = array[i + 1], array[i]
+              done = false
+            end
+          end
+          if done 
+            break
+          end
+        end 
+        return array
+      end
+      @each_sorted = @test_array
+      sort_each(@each_sorted)
+      expect(@each_sorted[0].lipids == 0.2).to be true
+    end
+    
+    it "is sorted with a sort" do
+      @sort_sorted = @test_array.sort
+      expect(@sort_sorted[0].lipids == 0.2).to be true
+    end
     
   end
   
