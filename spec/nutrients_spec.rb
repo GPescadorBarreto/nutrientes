@@ -129,6 +129,26 @@ RSpec.describe Nutrients do
           expect(@pork.respond_to?(:energy)).to eq(true)
         end
       end
+      describe Meat_Derivate do
+        before(:all) do
+          @sausage = Meat_Derivate.new("Sausage", 21.5, 0.0, 6.3)
+        end
+    
+        it "has the correct class" do
+          expect(@sausage.class).to eq(Meat_Derivate)
+        end
+    
+        it "has the correct superclass" do
+          expect(@sausage.class.superclass).to eq(Meat_Product)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@sausage.class.ancestors.include?(Food)).to eq(true)
+        end
+        it "responds to superclass methods" do
+          expect(@sausage.respond_to?(:energy)).to eq(true)
+        end
+      end
     end
     
     describe Sea_Product do
@@ -150,6 +170,26 @@ RSpec.describe Nutrients do
         end
         it "responds to superclass methods" do
           expect(@cod.respond_to?(:energy)).to eq(true)
+        end
+      end
+      describe Shellfish do
+        before(:all) do
+          @lobster = Shellfish.new("Lobster", 17.7, 14.0, 0.4)
+        end
+    
+        it "has the correct class" do
+          expect(@lobster.class).to eq(Shellfish)
+        end
+    
+        it "has the correct superclass" do
+          expect(@lobster.class.superclass).to eq(Sea_Product)
+        end
+    
+        it "is part of a hierarchy" do
+          expect(@lobster.class.ancestors.include?(Food)).to eq(true)
+        end
+        it "responds to superclass methods" do
+          expect(@lobster.respond_to?(:energy)).to eq(true)
         end
       end
     end
