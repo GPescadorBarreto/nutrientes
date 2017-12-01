@@ -48,6 +48,30 @@ RSpec.describe Nutrients do
       expect(@for_sorted[0].lipids == 0.2).to be true
     end
     
+    it "is sorted with an each" do
+      def sort_each (array)
+        array.each do
+          done = true
+          array.each_with_index do |n, i|
+            if i == array.length - 1 
+              break
+            end
+            if n > array[i + 1]
+              array[i], array[i + 1] = array[i + 1], array[i]
+              done = false
+            end
+          end
+          if done 
+            break
+          end
+        end 
+        return array
+      end
+      @each_sorted = @test_array
+      sort_each(@each_sorted)
+      expect(@each_sorted[0].lipids == 0.2).to be true
+    end
+    
     it "is named" do
       expect(@chocolate.name).not_to be nil
     end
