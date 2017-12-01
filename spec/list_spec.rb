@@ -61,5 +61,25 @@ RSpec.describe Node do
         it "is enumerable" do
             expect(@list.all? { |node| node.node[:value] >= 0}).to be true 
         end
+        
+        it "can put last when empty" do
+            @list2 = List.new()
+            @list2.put_last(@nodeA)
+            expect(@list.head).to_not be nil
+            expect(@list.tail).to_not be nil
+        end
+        
+        it "can delete first node with only 1 node" do
+            @list2.del_first()
+            expect(@list2.head).to be nil
+            expect(@list2.tail).to be nil
+        end
+        
+        it "can delete last node with only 1 node" do
+            @list2.put_last(@nodeA)
+            @list2.del_last()
+            expect(@list2.head).to be nil
+            expect(@list2.tail).to be nil
+        end
     end
 end
